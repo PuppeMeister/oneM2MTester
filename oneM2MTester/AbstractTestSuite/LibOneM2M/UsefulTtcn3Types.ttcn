@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     oneM2M
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/trunk/ttcn/LibOneM2M/UsefulTtcn3Types.ttcn $
- *              $Id: UsefulTtcn3Types.ttcn 234 2017-03-20 16:37:29Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Useful types
  *
  */

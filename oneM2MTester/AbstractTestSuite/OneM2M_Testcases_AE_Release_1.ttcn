@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/OneM2M_Testcases.ttcn $
- *              $Id: OneM2M_Testcases.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Module containing test cases for oneM2M
  *
  */
@@ -18,12 +16,10 @@ module OneM2M_Testcases_AE_Release_1 {
 	import from OneM2M_Types all;//{type XSD.ID};
 	import from OneM2M_TypesAndValues all;
 	import from OneM2M_Pixits all;
-	import from LibCommon_Time all;
 	import from OneM2M_Pics all;
 	import from OneM2M_Functions all;
 	import from OneM2M_PermutationFunctions all;
-	import from XSD all;
-
+	
 	group AE {
 		
 		group General {
@@ -42,7 +38,7 @@ module OneM2M_Testcases_AE_Release_1 {
 												
 						// Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -56,7 +52,7 @@ module OneM2M_Testcases_AE_Release_1 {
 												
 						// Test control
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -70,7 +66,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						// Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						v_cse1.start(f_AE_GEN_CRE_001(e_absolute));
@@ -90,7 +86,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -103,7 +99,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -116,7 +112,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -142,7 +138,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						// Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -156,7 +152,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 					//Test control
 					if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-						setverdict(inconc, __SCOPE__, ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
+						setverdict(inconc, __SCOPE__ & ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
 						stop;
 					}
 						
@@ -170,7 +166,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -192,7 +188,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -206,7 +202,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -220,7 +216,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -246,7 +242,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						// Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -260,7 +256,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -274,7 +270,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -296,7 +292,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -310,7 +306,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -324,7 +320,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -350,7 +346,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -364,7 +360,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -378,7 +374,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Unstructured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -400,7 +396,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_CSE_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-CSE-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -414,7 +410,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_SP_RELATIVE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-SP-Relative-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -428,7 +424,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						//Test control
 						if(not(PICS_PRIMITIVE_SCOPE_ABSOLUTE)) {
-							setverdict(inconc, __SCOPE__, ": Structured-Absolute-Resource-ID format support is required to run this test case");
+							setverdict(inconc, __SCOPE__ & ": Structured-Absolute-Resource-ID format support is required to run this test case");
 							stop;
 						}
 						
@@ -459,15 +455,17 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 					
-				function f_AE_REG_CRE_001() runs on CseSimu {
+				function f_AE_REG_CRE_001() runs on CseSimu system AeSystem {
 
 					//primitives for utPort
 					var template UtTriggerPrimitive v_utRequest := m_utCreateAe;
-					
+					var integer v_parentIndex := -1;
+					var integer v_resourceIndex := -1;
+					var PrimitiveContent v_resource;
 
 					//primitives for mcaPortIn
 					var MsgIn v_request;
-					var template RequestPrimitive v_requestPrimitive := mw_createAe;
+					var template RequestPrimitive v_requestPrimitive := mw_createAe("", -, -);
 					var ResponsePrimitive v_responsePrimitive;
 					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid AE CREATE Registration Request";
 
@@ -476,26 +474,26 @@ module OneM2M_Testcases_AE_Release_1 {
 					//Send Trigger Message
 					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(-, -, -);
 					v_requestPrimitive.to_ := v_utRequest.requestPrimitive.to_;
-					f_sendUtPrimitive(v_utRequest, v_action);
+					f_sendUtPrimitive(v_utRequest, v_action & f_getLocalResourceAddress(-, -, -));
 
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(v_requestPrimitive)) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : AE registration request is accepted!!");
-							//v_responsePrimitive := valueof(m_responsePrimitiveTemp(int2000, omit));
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
+							setverdict(pass, __SCOPE__ & " : AE registration request is accepted!!");
+							v_resourceIndex := f_processCreateRequestPrimitive(v_request.primitive.requestPrimitive);	
 							
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(vc_response.primitive.responsePrimitive));
 						}
-						[] mcaPortIn.receive(mw_request(mw_createAe(*,?,m_contentCreateAe_Invalid))) -> value v_request {
+						[] mcaPortIn.receive(mw_request(mw_createAe())) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : AE registration request is rejected due to not including mandatory attributes!!");
+							setverdict(fail, __SCOPE__ & " : Unexpected AE registration request");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 	
 					}
@@ -643,6 +641,20 @@ module OneM2M_Testcases_AE_Release_1 {
 						v_cse1.done;
 					}
 	
+					testcase TC_AE_REG_CRE_002_SRV() runs on Tester system AeSystem {
+						
+						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
+						//primitives for utPort
+						var template UtTriggerPrimitive v_utRequest := m_utCreateAe;
+						var template RequestPrimitive v_createAe := mw_createAe;
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid AE CREATE Registration Request containing attribute SupportedReleaseVersions";
+						v_utRequest.requestPrimitive.primitiveContent.aE.supportedReleaseVersions := {"2a"};
+						v_utRequest.forcedFields := {{name := "supportedReleaseVersions", value_ := "UNINITIALIZED"}};
+						v_createAe.primitiveContent.aE.supportedReleaseVersions := ?;//Check value other than UNINITIALIZED, done by typing
+						v_cse1.start(f_AE_REG_CRE_002(v_utRequest,v_createAe,v_action));
+						v_cse1.done;
+					}
+
 				}//End of subgroup AE_REG_CRE_002
 				
 			} // End of subgroup Create
@@ -663,7 +675,7 @@ module OneM2M_Testcases_AE_Release_1 {
 					
 				}
 					
-				function f_AE_REG_DEL_001() runs on CseSimu {
+				function f_AE_REG_DEL_001() runs on CseSimu system AeSystem {
 	
 					//variables
 					var MsgIn v_request;
@@ -677,30 +689,29 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 					f_cf03Up();
 	
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentAe(m_contentCreateAe(omit, -, -, omit))), vc_cSEBaseIndex, int2);
-					v_auxInteger := f_setLocalResource(v_localResource, int2);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentAe(m_contentCreateAe(omit, -, -, omit))), vc_cSEBaseIndex, int2);
+					v_auxInteger := f_setLocalResource(v_localResource, int2, vc_cSEBaseIndex);
 					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger, -, -);
-					f_sendUtPrimitive(v_utRequest,v_action);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_auxInteger, -, -));
 	
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_delete(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : AE deregistration request is accepted!");
-	
-							//v_responsePrimitive := valueof(m_responsePrimitiveTemp(int2000, omit));
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
+							setverdict(pass, __SCOPE__ & " : AE deregistration request is accepted!");
+							v_responsePrimitive := valueof(m_responsePrimitive(int2002, v_request.primitive.requestPrimitive.requestIdentifier, omit));
 	
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive (mw_request(mw_delete(?)))  {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : Error while AE deregistration");
+							setverdict(fail, __SCOPE__ & " : Unexpected DELETE request");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 	
 					}
@@ -729,41 +740,39 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_CRE_001() runs on CseSimu {
+				function f_AE_DMR_CRE_001() runs on CseSimu system AeSystem {
 	
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 					var MsgIn v_request;
+					var integer v_resourceIndex := -1;
 					var template RequestPrimitive v_requestPrimitive := mw_createContainer;
-					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for container";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for container to ";
 					
 					f_cf03Up();
 	
 					//send triggering primitive to SUT
 					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(-, -, -);
 					v_requestPrimitive.to_ := v_utRequest.requestPrimitive.to_;
-					f_sendUtPrimitive(v_utRequest,v_action);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(-, -, -));
 					
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(v_requestPrimitive)) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : Container creation request is accepted!");
-	
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-							
+							setverdict(pass, __SCOPE__ & " : Container creation request is accepted!");
+							v_resourceIndex := f_processCreateRequestPrimitive(v_request.primitive.requestPrimitive);	
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(vc_response.primitive.responsePrimitive));
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive(mw_request(mw_create)) -> value v_request{
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : Container creation request is rejected due to not including mandatory attributes!!");
+							setverdict(fail, __SCOPE__ & " : Unexpected CREATE request ");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 	
@@ -783,25 +792,25 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_CRE_002() runs on CseSimu {
+				function f_AE_DMR_CRE_002() runs on CseSimu system AeSystem {
 	
 					var template UtTriggerPrimitive v_utRequest := m_utCreateContentInstance;
 					var MsgIn v_request;
+					var integer v_resourceIndex := -1;
 					var PrimitiveContent v_localResource;
 					var integer v_containerIndex := -1;
 					var template RequestPrimitive v_requestPrimitive := mw_createContentInstance;
-					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance to ";
 	
 					//Test component configuration
 					f_cf03Up();
 	
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_containerIndex := f_setLocalResource(v_localResource, int3);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_containerIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
 					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_containerIndex, -, -);
 					v_requestPrimitive.to_ := v_utRequest.requestPrimitive.to_;
-					f_sendUtPrimitive(v_utRequest,v_action);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_containerIndex, -, -));
 	
 					//Test behavior
 					tc_ac.start;
@@ -810,22 +819,18 @@ module OneM2M_Testcases_AE_Release_1 {
 						//receive MsgIn requestPrimitive
 						[] mcaPortIn.receive(mw_request(v_requestPrimitive)) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : ContentInstance creation request is accepted!!");
-							
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-	
+							setverdict(pass, __SCOPE__ & " : ContentInstance creation request is accepted!!");
+							v_resourceIndex := f_processCreateRequestPrimitive(v_request.primitive.requestPrimitive);	
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(vc_response.primitive.responsePrimitive));
 						}
-	
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive(mw_request(mw_create)) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : ContentInstance creation request is rejected due to not including mandatory attributes!!");
+							setverdict(fail, __SCOPE__ & " : Unexpected CREATE request ");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
-	
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 					
@@ -844,7 +849,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContentInstance;
 						var template RequestPrimitive v_request := mw_createContentInstance;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute ContentInfo";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute ContentInfo to ";
 						v_utRequest.requestPrimitive.primitiveContent.contentInstance.contentInfo := "UNINITIALIZED";
 						v_request.primitiveContent.contentInstance.contentInfo := complement("UNINITIALIZED");
 						v_cse1.start(f_AE_DMR_CRE_003(v_utRequest,v_request,v_action));
@@ -856,7 +861,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContentInstance;
 						var template RequestPrimitive v_request := mw_createContentInstance;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute ResourceName";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute ResourceName to ";
 						v_utRequest.requestPrimitive.primitiveContent.contentInstance.resourceName := "UNINITIALIZED";
 						v_request.primitiveContent.contentInstance.resourceName := complement("UNINITIALIZED");
 						v_cse1.start(f_AE_DMR_CRE_003(v_utRequest,v_request,v_action));
@@ -868,7 +873,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContentInstance;
 						var template RequestPrimitive v_request := mw_createContentInstance;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute ExpirationTime";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute ExpirationTime to";
 						v_utRequest.requestPrimitive.primitiveContent.contentInstance.expirationTime := "20301231T012345";
 						v_utRequest.forcedFields := {{name := "expirationTime", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.contentInstance.expirationTime := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -881,7 +886,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContentInstance;
 						var template RequestPrimitive v_request := mw_createContentInstance;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute Labels";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute Labels to ";
 						v_utRequest.requestPrimitive.primitiveContent.contentInstance.labels := {"UNINITIALIZED"};
 						v_request.primitiveContent.contentInstance.labels := complement({*,"UNINITIALIZED",*});
 						v_cse1.start(f_AE_DMR_CRE_003(v_utRequest,v_request,v_action));
@@ -893,7 +898,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContentInstance;
 						var template RequestPrimitive v_request := mw_createContentInstance;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute Creator";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for ContentInstance containing attribute Creator to ";
 						v_utRequest.requestPrimitive.primitiveContent.contentInstance.creator := "UNINITIALIZED";
 						v_request.primitiveContent.contentInstance.creator := complement("UNINITIALIZED");
 						v_cse1.start(f_AE_DMR_CRE_003(v_utRequest,v_request,v_action));
@@ -915,7 +920,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute AccessControlPolicyIDs";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute AccessControlPolicyIDs to";
 						v_utRequest.requestPrimitive.primitiveContent.container.accessControlPolicyIDs := {"UNINITIALIZED"};
 						v_request.primitiveContent.container.accessControlPolicyIDs := complement({*,"UNINITIALIZED",*});
 						v_cse1.start(f_AE_DMR_CRE_004(v_utRequest,v_request,v_action));
@@ -927,7 +932,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute MaxNrOfInstances";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute MaxNrOfInstances to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.maxNrOfInstances := 1;
 						v_utRequest.forcedFields := {{name := "maxNrOfInstances", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.maxNrOfInstances := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -940,7 +945,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute MaxByteSize";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute MaxByteSize to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.maxByteSize := 1;
 						v_utRequest.forcedFields := {{name := "maxByteSize", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.maxByteSize := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -953,7 +958,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute MaxInstanceAge";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute MaxInstanceAge to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.maxInstanceAge := 1;
 						v_utRequest.forcedFields := {{name := "maxInstanceAge", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.maxInstanceAge := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -966,7 +971,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute OntologyRef";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute OntologyRef to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.ontologyRef := "UNINITIALIZED";
 						v_request.primitiveContent.container.ontologyRef := complement("UNINITIALIZED");
 						v_cse1.start(f_AE_DMR_CRE_004(v_utRequest,v_request,v_action));
@@ -978,7 +983,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute ResourceName";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute ResourceName to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.resourceName := "UNINITIALIZED";
 						v_request.primitiveContent.container.resourceName := complement("UNINITIALIZED");
 						v_cse1.start(f_AE_DMR_CRE_004(v_utRequest,v_request,v_action));
@@ -990,7 +995,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute ExpirationTime";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute ExpirationTime to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.expirationTime := "20301231T012345";
 						v_utRequest.forcedFields := {{name := "expirationTime", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.expirationTime := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -1003,7 +1008,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute Labels";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute Labels to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.labels := {"UNINITIALIZED"};
 						v_request.primitiveContent.container.labels := complement({*,"UNINITIALIZED",*});
 						v_cse1.start(f_AE_DMR_CRE_004(v_utRequest,v_request,v_action));
@@ -1015,7 +1020,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template UtTriggerPrimitive v_utRequest := m_utCreateContainer;
 						var template RequestPrimitive v_request := mw_createContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute Creator";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid CREATE Request for Container containing attribute Creator to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.creator := "UNINITIALIZED";
 						v_request.primitiveContent.container.creator := complement("UNINITIALIZED");
 						v_cse1.start(f_AE_DMR_CRE_004(v_utRequest,v_request,v_action));
@@ -1036,10 +1041,10 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 					testcase TC_AE_DMR_UPD_001_ET() runs on Tester system AeSystem {
 						
-						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;						
+						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						
 						var template RequestPrimitive v_expectedUpdateRequestAe;
-						var universal charstring v_action := "Please, send a valid UPDATE Request for AE updating attribute expirationTime";
+						var universal charstring v_action := "Please, send a valid UPDATE Request for AE updating attribute expirationTime to ";
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
 						
 						v_utRequest.requestPrimitive.primitiveContent.aE.expirationTime := "20301231T012345";
@@ -1053,10 +1058,10 @@ module OneM2M_Testcases_AE_Release_1 {
 					
 					testcase TC_AE_DMR_UPD_001_LBL() runs on Tester system AeSystem {
 						
-						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;						
+						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action := "Please, send a valid UPDATE Request for AE updating attribute labels";
+						var universal charstring v_action := "Please, send a valid UPDATE Request for AE updating attribute labels to ";
 						
 						v_utRequest.requestPrimitive.primitiveContent.aE.labels := {"UNINITIALIZED"};
 						
@@ -1074,7 +1079,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute appName";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute appName to ";
 						
 						v_utRequest.requestPrimitive.primitiveContent.aE.appName := "UNINITIALIZED";
 
@@ -1091,7 +1096,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute pointOfAccess";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute pointOfAccess to ";
 						
 						v_utRequest.requestPrimitive.primitiveContent.aE.pointOfAccess := {"UNINITIALIZED"};
 
@@ -1108,8 +1113,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute ontologyRef";
-						
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute ontologyRef to ";
 						v_utRequest.requestPrimitive.primitiveContent.aE.ontologyRef := "UNINITIALIZED";
 
 						v_expectedUpdateRequestAe.primitiveContent.aE := mw_contentAeUpdateRequest;
@@ -1125,8 +1129,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute nodeLink";
-						
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute nodeLink to ";
 						v_utRequest.requestPrimitive.primitiveContent.aE.nodeLink := "UNINITIALIZED";
 
 						v_expectedUpdateRequestAe.primitiveContent.aE := mw_contentAeUpdateRequest;
@@ -1141,8 +1144,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute requestReachability";
-						
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute requestReachability to ";
 						v_utRequest.requestPrimitive.primitiveContent.aE.requestReachability := true;
 						v_utRequest.forcedFields := {{name := "requestReachability", value_ := "UNINITIALIZED"}};
 						
@@ -1158,8 +1160,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_expectedUpdateRequestAe;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateAe;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute contentSerialization";
-						
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for AE updating attribute contentSerialization to ";
 						v_utRequest.requestPrimitive.primitiveContent.aE.contentSerialization := {applicationxml};
 						v_utRequest.forcedFields := {{name := "contentSerialization", value_ := "UNINITIALIZED"}};
 						
@@ -1183,7 +1184,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_request := mw_updateContainer;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute expirationTime";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute expirationTime to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.expirationTime := "20301231T012345";
 						v_request.primitiveContent.container.expirationTime := ?;
 						v_cse1.start(f_AE_DMR_UPD_002(v_utRequest,v_request,v_action));
@@ -1195,7 +1196,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_request := mw_updateContainer;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute labels";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute labels to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.labels := {"UNINITIALIZED"};
 						v_request.primitiveContent.container.labels := complement({*,"UNINITIALIZED",*});
 						v_cse1.start(f_AE_DMR_UPD_002(v_utRequest,v_request,v_action));
@@ -1207,7 +1208,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_request := mw_updateContainer;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute maxNrOfInstances";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute maxNrOfInstances to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.maxNrOfInstances := 1;
 						v_utRequest.forcedFields := {{name := "maxNrOfInstances", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.maxNrOfInstances := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -1220,7 +1221,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_request := mw_updateContainer;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute maxByteSize";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute maxByteSize to ";
 						v_utRequest.requestPrimitive.primitiveContent.container.maxByteSize := 1;
 						v_utRequest.forcedFields := {{name := "maxByteSize", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.maxByteSize := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -1233,7 +1234,7 @@ module OneM2M_Testcases_AE_Release_1 {
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
 						var template RequestPrimitive v_request := mw_updateContainer;
 						var template UtTriggerPrimitive v_utRequest := m_utUpdateContainer;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute maxInstanceAge";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid UPDATE Request for Container updating attribute maxInstanceAge to ";
                         v_utRequest.requestPrimitive.primitiveContent.container.maxInstanceAge := 1;
 						v_utRequest.forcedFields := {{name := "maxInstanceAge", value_ := "UNINITIALIZED"}};
 						v_request.primitiveContent.container.maxInstanceAge := ?;//Check value other than "UNINITIALIZED", done by typing
@@ -1256,7 +1257,7 @@ module OneM2M_Testcases_AE_Release_1 {
 					testcase TC_AE_DMR_RET_001_CB() runs on Tester system AeSystem {
 						
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for CSEBase";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for CSEBase to ";
 						v_cse1.start(f_AE_DMR_RET_001(int5, m_primitiveContentCSEBase(m_contentCreateCSEBase),v_action));
 						v_cse1.done;
 					}
@@ -1264,7 +1265,7 @@ module OneM2M_Testcases_AE_Release_1 {
 					testcase TC_AE_DMR_RET_001_AE() runs on Tester system AeSystem {
 						
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for AE";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for AE to ";
 						v_cse1.start(f_AE_DMR_RET_001(int2, m_primitiveContentAe(m_contentCreateAe(omit, omit, omit, omit)),v_action));
 						v_cse1.done;
 					}
@@ -1272,7 +1273,7 @@ module OneM2M_Testcases_AE_Release_1 {
 					testcase TC_AE_DMR_RET_001_CNT() runs on Tester system AeSystem {
 						
 						var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
-						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for Container";
+						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for Container to ";
 						v_cse1.start(f_AE_DMR_RET_001(int3, m_primitiveContentContainer(m_contentCreateContainer()),v_action));
 						v_cse1.done;
 					}
@@ -1292,46 +1293,45 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_RET_002() runs on CseSimu {
+				function f_AE_DMR_RET_002() runs on CseSimu system AeSystem {
 	
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex, v_containerResourceIndex := -1;
 					var PrimitiveContent v_localResource;
 	
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utRetrieve("NotInitialized");
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the 'oldest' attribute from Container";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the 'oldest' child resource of Container at ";
 	
 					//Test component configuration
 					f_cf03Up();
 	
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_auxInteger := f_setLocalResource(v_localResource, int3);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger) & "/" & c_resourceShortNameOldest;
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_containerResourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContentInstance(m_contentCreateContentInstance)), vc_cSEBaseIndex, int4);
+					v_resourceIndex := f_setLocalResource(v_localResource, int4, v_containerResourceIndex);
+					
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_containerResourceIndex) & "/" & c_resourceShortNameOldest;
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_containerResourceIndex));
 	
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_retrieve(v_utRequest.requestPrimitive.to_ ))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : retrieve attribute oldest request is accepted!");
-	
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-	
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-							tc_ac.stop;
+							setverdict(pass, __SCOPE__ & " : retrieve attribute oldest request is accepted!");
+							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, vc_localResourcesList[v_resourceIndex].resource));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive(mw_request(mw_retrieve(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while retrieving attribute !");
+							setverdict(fail, __SCOPE__ & " : Retrieve Request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 	
@@ -1352,46 +1352,46 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_RET_003() runs on CseSimu {
+				function f_AE_DMR_RET_003() runs on CseSimu system AeSystem {
 	
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex, v_containerResourceIndex := -1;
 					var PrimitiveContent v_localResource;
 	
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utRetrieve("NotInitialized");
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the 'latest' attribute from Container";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the 'latest' attribute from Container at ";
 	
 					//Test component configuration
 					f_cf03Up();
 	
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_auxInteger := f_setLocalResource(v_localResource, int3);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger) & "/" & c_resourceShortNameLatest;
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_containerResourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContentInstance(m_contentCreateContentInstance)), vc_cSEBaseIndex, int4);
+					v_resourceIndex := f_setLocalResource(v_localResource, int4, v_containerResourceIndex);
+					
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_containerResourceIndex) & "/" & c_resourceShortNameLatest;
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_containerResourceIndex));
+	
 	
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_retrieve(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : retrieve attribute latest request is accepted!!");
-	
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-	
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-							tc_ac.stop;
+							setverdict(pass, __SCOPE__ & " : retrieve attribute latest request is accepted!!");
+							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, vc_localResourcesList[v_resourceIndex].resource));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive(mw_request(mw_retrieve(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while retrieving attribute !");
+							setverdict(fail, __SCOPE__ & " : Retrieve Request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 	
@@ -1412,46 +1412,42 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_RET_004() runs on CseSimu {
+				function f_AE_DMR_RET_004() runs on CseSimu system AeSystem {
 					
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex := -1;
 					var PrimitiveContent v_localResource;
 		
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utRetrieve("NotInitialized");
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the Container";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the Container to ";
 
 					//Test component configuration
 					f_cf03Up();
 
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_auxInteger := f_setLocalResource(v_localResource, int3);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger);
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_resourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_resourceIndex);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_resourceIndex));
 	
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_retrieve(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : retrieve resource type request is accepted!!");
-			
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-							tc_ac.stop;
+							setverdict(pass, __SCOPE__ & " : retrieve resource type request is accepted!!");
+							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, vc_localResourcesList[v_resourceIndex].resource));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive(mw_request(mw_retrieve(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while retrieving resource !");
+							setverdict(fail, __SCOPE__ & " : Retrieve Request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1472,46 +1468,44 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_RET_005() runs on CseSimu {
+				function f_AE_DMR_RET_005() runs on CseSimu system AeSystem {
 	
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex := -1;
 					var PrimitiveContent v_localResource;
 
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utRetrieve("NotInitialized");
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the contentInstance";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid RETRIEVE Request for retrieving the contentInstance to ";
 
 					//Test component configuration
 					f_cf03Up();
 
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContentInstance(m_contentCreateContentInstance)), vc_cSEBaseIndex, int4);
-					v_auxInteger := f_setLocalResource(v_localResource, int4);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger);
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_resourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContentInstance(m_contentCreateContentInstance)), v_resourceIndex, int4);
+					v_resourceIndex := f_setLocalResource(v_localResource, int4, v_resourceIndex);
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_resourceIndex);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_resourceIndex));
 
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_retrieve(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : retrieve resource type request is accepted!!");
-
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-							tc_ac.stop;
+							setverdict(pass, __SCOPE__ & " : retrieve resource type request is accepted!!");
+							v_responsePrimitive := valueof(m_responsePrimitive(int2000, v_request.primitive.requestPrimitive.requestIdentifier, vc_localResourcesList[v_resourceIndex].resource));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive(mw_request(mw_retrieve(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while retrieving resource !");
+							setverdict(fail, __SCOPE__ & " : Retrieve Request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1536,46 +1530,47 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_DEL_001() runs on CseSimu {
+				function f_AE_DMR_DEL_001() runs on CseSimu system AeSystem {
 
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex := -1;
 					var PrimitiveContent v_localResource;
 					
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utDelete;
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the 'oldest' attribute from contentInstance";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the 'oldest' resource from container to ";
 
 					//Test component configuration
 					f_cf03Up();
 
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_auxInteger := f_setLocalResource(v_localResource, int3);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger) & "/" & c_resourceShortNameOldest;
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_resourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_resourceIndex) & "/" & c_resourceShortNameOldest;
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_resourceIndex));
 
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_delete(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : delete attribute oldest request is accepted!!");
+							setverdict(pass, __SCOPE__ & " : Delete oldest ContentInstance resource is accepted");
 
 							//set responseStatusCode back to SUT
 							v_responsePrimitive := valueof(m_responsePrimitive(int2002, v_request.primitive.requestPrimitive.requestIdentifier, omit));
 
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 							tc_ac.stop;
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive (mw_request(mw_delete(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while deleting attribute !");
+							setverdict(fail, __SCOPE__ & " : Delete request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1596,46 +1591,47 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_DEL_002() runs on CseSimu {
+				function f_AE_DMR_DEL_002() runs on CseSimu system AeSystem {
 
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex := -1;
 					var PrimitiveContent v_localResource;
 
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utDelete;
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the 'latest' attribute from contentInstance";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the 'latest' resource from container to ";
 
 					//Test component configuration
 					f_cf03Up();
 
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_auxInteger := f_setLocalResource(v_localResource, int3);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger) & "/" & c_resourceShortNameLatest;
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_resourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_resourceIndex) & "/" & c_resourceShortNameLatest;
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_resourceIndex));
 
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_delete(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : delete attribute latest request is accepted!!");
+							setverdict(pass, __SCOPE__ & " : delete attribute latest resource ContentInstance is accepted");
 
 							//set responseStatusCode back to SUT
 							v_responsePrimitive := valueof(m_responsePrimitive(int2002, v_request.primitive.requestPrimitive.requestIdentifier, omit));
 
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 							tc_ac.stop;
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive (mw_request(mw_delete(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while deleting attribute !");
+							setverdict(fail, __SCOPE__ & " : Delete request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1656,46 +1652,47 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_DEL_003() runs on CseSimu {
+				function f_AE_DMR_DEL_003() runs on CseSimu system AeSystem {
 	
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex := -1;
 					var PrimitiveContent v_localResource;
 
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utDelete;
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the container resource";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the container resource to ";
 
 					//Test component configuration
 					f_cf03Up();
 
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
-					v_auxInteger := f_setLocalResource(v_localResource, int3);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger);
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_resourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_resourceIndex);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_resourceIndex));
 
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_delete(v_utRequest.requestPrimitive.to_))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : delete resource type request is accepted!!");
+							setverdict(pass, __SCOPE__ & " : delete resource type request is accepted!!");
 
 							//set responseStatusCode back to SUT
 							v_responsePrimitive := valueof(m_responsePrimitive(int2002, v_request.primitive.requestPrimitive.requestIdentifier, omit));
 
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 							tc_ac.stop;
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive (mw_request(mw_delete(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while deleting resource !");
+							setverdict(fail, __SCOPE__ & " : Delete request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1716,46 +1713,49 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_DMR_DEL_004() runs on CseSimu {
+				function f_AE_DMR_DEL_004() runs on CseSimu system AeSystem {
 
-					var integer v_auxInteger := -1;
+					var integer v_resourceIndex, v_containerResourceIndex := -1;
 					var PrimitiveContent v_localResource;
 
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utDelete;
 					var MsgIn v_request;
 					var ResponsePrimitive v_responsePrimitive;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the contentInstance resource";
+					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid DELETE Request for deleting the contentInstance resource to ";
 
 					//Test component configuration
 					f_cf03Up();
 
 					//send triggering primitive to SUT
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentContentInstance(m_contentCreateContentInstance)), vc_cSEBaseIndex, int4);
-					v_auxInteger := f_setLocalResource(v_localResource, int4);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger);
-					f_sendUtPrimitive(v_utRequest,v_action);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContainer(m_contentCreateContainer)), vc_cSEBaseIndex, int3);
+					v_containerResourceIndex := f_setLocalResource(v_localResource, int3, vc_cSEBaseIndex);
+					v_localResource := f_generateLocalResource(valueof(m_primitiveContentContentInstance(m_contentCreateContentInstance)), v_containerResourceIndex, int4);
+					v_resourceIndex := f_setLocalResource(v_localResource, int4, v_containerResourceIndex);
+					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_resourceIndex);
+					f_sendUtPrimitive(v_utRequest,v_action & f_getLocalResourceAddress(v_resourceIndex));
 
 					//Test behavior
 					tc_ac.start;
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_delete(v_utRequest.requestPrimitive.to_ ))) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : delete resource type request is accepted!!");
+							setverdict(pass, __SCOPE__ & " : delete resource type request is accepted!!");
 
 							//set responseStatusCode back to SUT
 							v_responsePrimitive := valueof(m_responsePrimitive(int2002, v_request.primitive.requestPrimitive.requestIdentifier, omit));
 
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 							tc_ac.stop;
 						}
-						[] mcaPortIn.receive {
+						[] mcaPortIn.receive (mw_request(mw_delete(?))) -> value v_request {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : error while deleting resource !");
+							setverdict(fail, __SCOPE__ & " : Delete request for unexpected target");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1785,11 +1785,14 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_SUB_CRE_001() runs on CseSimu {
+				function f_AE_SUB_CRE_001() runs on CseSimu system AeSystem {
 				
 					//variables
 					var template UtTriggerPrimitive v_utRequest := m_utCreateSubscription;
 					var MsgIn v_request;
+					var integer v_parentIndex := -1;
+					var integer v_resourceIndex := -1;
+					var PrimitiveContent v_resource;
 					var ResponsePrimitive v_responsePrimitive;
 					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid subscription creation request";
 				  	
@@ -1804,20 +1807,22 @@ module OneM2M_Testcases_AE_Release_1 {
 					alt{
 						[] mcaPortIn.receive(mw_request(mw_createSubscription)) -> value v_request {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : Subscription creation request is accepted!");
-
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-		
+							setverdict(pass, __SCOPE__ & " : Subscription creation request is accepted!");
+							v_parentIndex := f_getLocalResourceIndex(v_request.primitive.requestPrimitive.to_);
+							v_resource := f_generateLocalResource(v_request.primitive.requestPrimitive.primitiveContent, v_parentIndex, v_request.primitive.requestPrimitive.resourceType);
+							v_resourceIndex := f_setLocalResource(v_resource, v_request.primitive.requestPrimitive.resourceType, v_parentIndex);	
+							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, vc_localResourcesList[v_resourceIndex].resource));
+							
 							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
+							f_send(e_mca_in_port, m_response(v_responsePrimitive));
 						}
 						[] mcaPortIn.receive {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : Subscription creation request is rejected due to not including mandatory attributes!!");
+							setverdict(fail, __SCOPE__ & " : Subscription creation request is rejected due to not including mandatory attributes!!");
+							f_send(e_mca_in_port, m_response(valueof(m_responsePrimitive(int4004, v_request.primitive.requestPrimitive.requestIdentifier, omit))));
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
 
@@ -1844,7 +1849,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 						
-						v_cse1.stop;
+						v_cse1.done;
 					}
 					
 					testcase TC_AE_SUB_CRE_002_ENC() runs on Tester system AeSystem {
@@ -1862,7 +1867,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 					
-						v_cse1.stop;
+						v_cse1.done;
 					}
 					
 					testcase TC_AE_SUB_CRE_002_EXC() runs on Tester system AeSystem {
@@ -1871,7 +1876,6 @@ module OneM2M_Testcases_AE_Release_1 {
 						var template UtTriggerPrimitive v_utRequest := m_utCreateSubscription;
 						var template RequestPrimitive v_requestT := mw_createSubscription;
 						var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid subscription creation request with optional attribute expirationCounter";
-
 						v_utRequest.requestPrimitive.primitiveContent.subscription.notificationURI := {"UNINITIALIZED"};
 						v_utRequest.requestPrimitive.primitiveContent.subscription.expirationCounter := 1;
 						v_utRequest.forcedFields := {{name := "expirationCounter", value_ := "UNINITIALIZED"}};
@@ -1880,7 +1884,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 						
-						v_cse1.stop;
+						v_cse1.done;
 					}
 					
 					testcase TC_AE_SUB_CRE_002_NFU() runs on Tester system AeSystem {
@@ -1896,7 +1900,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 						
-						v_cse1.stop;
+						v_cse1.done;
 					}
 					
 					testcase TC_AE_SUB_CRE_002_NCT() runs on Tester system AeSystem {
@@ -1913,7 +1917,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 						
-						v_cse1.stop;
+						v_cse1.done;
 					}
 					 
 					testcase TC_AE_SUB_CRE_002_NEC() runs on Tester system AeSystem {
@@ -1930,7 +1934,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 						
-						v_cse1.stop;
+						v_cse1.done;
 					}
 					
 					testcase TC_AE_SUB_CRE_002_SU() runs on Tester system AeSystem {
@@ -1946,7 +1950,7 @@ module OneM2M_Testcases_AE_Release_1 {
 	
 						v_cse1.start(f_AE_SUB_CRE_002(v_utRequest, v_requestT, v_action));
 						
-						v_cse1.stop;
+						v_cse1.done;
 					}
 
 				}//End AE_SUB_CRE_002
@@ -1968,89 +1972,43 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_SUB_NTF_001() runs on CseSimu {
+				function f_AE_SUB_NTF_001() runs on CseSimu system AeSystem {
 
 					//variables
-					var template UtTriggerPrimitive v_utRequest := m_utCreateAe;
-					var MsgIn v_request;
-					var ResponsePrimitive v_responsePrimitive;
-					var PrimitiveContent v_localResource;
-					var integer v_auxInteger := -1;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid AE Registration CREATE Request";
-  	
+					var RequestPrimitive v_req;
+					var integer v_aeLocalIndex := -1;
+					
+					// Test control
+		
+					// Test component configuration
 					f_cf03Up();
 
-					//create Ae
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentAe(m_contentCreateAe(omit, omit, omit, omit))), vc_cSEBaseIndex, int2);
-					v_auxInteger := f_setLocalResource(v_localResource, int2);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress();
-					f_sendUtPrimitive(v_utRequest,v_action);
-
-					tc_ac.start;
-					alt{
-						[] mcaPortIn.receive(mw_request(mw_createAe)) -> value v_request {
-							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : AE registration request is accepted!!");
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-			
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-						}
-						[] mcaPortIn.receive(mw_request(mw_createAe(*,?,m_contentCreateAe_Invalid))) -> value v_request {
-							tc_ac.stop;
-							setverdict(inconc, __SCOPE__, " : AE registration request is rejected due to not including mandatory attributes!!");
-							stop;
-						}
-						[] tc_ac.timeout{
-							setverdict(inconc, __SCOPE__, " : Timeout due to no response received from requested SUT!");
-							stop;
-						}
-
-					}
-					
-					//create Subscription
-					v_utRequest := m_utCreateSubscription;
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger);
-					v_action := "Please, send a valid CREATE request for Subscription";
-					f_sendUtPrimitive(v_utRequest,v_action);
-					
-					tc_ac.start;
-					alt{
-						[] mcaPortIn.receive(mw_request(mw_createSubscription)) -> value v_request {
-							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : Subscription creation request is accepted!");
-
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-						}
-						[] mcaPortIn.receive {
-							tc_ac.stop;
-							setverdict(inconc, __SCOPE__, " : Subscription creation request is rejected due to not including mandatory attributes!!");
-						}
-						[] tc_ac.timeout{
-							setverdict(inconc, __SCOPE__, " : Timeout due to no response received from requested SUT!");
-						}
-					}
-					
-
+					// Preamble
+					// create Ae
+					v_aeLocalIndex := f_ae_preamble_registerAe();
+										
 					//Test behavior
-					mcaPortIn.send(m_request(m_notify));
+					v_req := valueof(m_notifyNotification("", m_contentNotification_subscriptionVerification(PX_TS_CSE1.cseId)));
+					v_req.from_ := PX_TS_CSE1.cseId;
+					
+					f_send(e_mca_port, m_request(v_req));
 					
 					tc_ac.start;
 					alt{
-						[] mcaPortIn.receive(mw_response(mw_responsePrimitiveOK)) {
+						[] mcaPort.receive(mw_response(mw_responsePrimitiveOK)) {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : Notification response is accepted!");
+							setverdict(pass, __SCOPE__ & " : Notification response is accepted!");
 						}
-						[] mcaPortIn.receive {
+						[] mcaPort.receive(mw_response(mw_responsePrimitiveKO)) {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : Notification response is rejected due to not including mandatory attributes!");
+							setverdict(fail, __SCOPE__ & " : Notification response with wrong response status code");
+						}
+						[] mcaPort.receive(mw_response(?)) {
+							tc_ac.stop;
+							setverdict(fail, __SCOPE__ & " : Unexpected Notification response");
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
  
@@ -2071,88 +2029,41 @@ module OneM2M_Testcases_AE_Release_1 {
 					v_cse1.done;
 				}
 
-				function f_AE_SUB_NTF_002() runs on CseSimu {
+				function f_AE_SUB_NTF_002() runs on CseSimu system AeSystem {
 
 					//variables
-					var template UtTriggerPrimitive v_utRequest := m_utCreateAe;
-					var MsgIn v_request;
-					var ResponsePrimitive v_responsePrimitive;
-					var PrimitiveContent v_localResource;
-					var integer v_auxInteger := -1;
-					var universal charstring v_action :=  __SCOPE__ & ": Please, send a valid AE Registration CREATE Request";
-  	
+					var integer v_aeLocalIndex := -1;
+					var RequestPrimitive v_req;
+					
+					// Test component configuration
 					f_cf03Up();
 
-					//create Ae
-					v_localResource := f_ae_generateLocalResource(valueof(m_primitiveContentAe(m_contentCreateAe(omit, omit, omit, omit))), vc_cSEBaseIndex, int2);
-					v_auxInteger := f_setLocalResource(v_localResource, int2);
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress();
-					f_sendUtPrimitive(v_utRequest,v_action);
-					tc_ac.start;
-					alt{
-						[] mcaPortIn.receive(mw_request(mw_createAe)) -> value v_request {
-							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : AE registration request is accepted!!");
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-			
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-						}
-						[] mcaPortIn.receive(mw_request(mw_createAe(*,?,m_contentCreateAe_Invalid))) -> value v_request {
-							tc_ac.stop;
-							setverdict(inconc, __SCOPE__, " : AE registration request is rejected due to not including mandatory attributes!!");
-							stop;
-						}
-						[] tc_ac.timeout{
-							setverdict(inconc, __SCOPE__, " : Timeout due to no response received from requested SUT!");
-							stop;
-						}
-
-					}
-					
-					//create Subscription
-					v_utRequest := m_utCreateSubscription;
-					v_utRequest.requestPrimitive.to_ := f_getLocalResourceAddress(v_auxInteger);
-					v_action := "Please, send a valid CREATE request for Subscription";
-					f_sendUtPrimitive(v_utRequest,v_action);
-					
-					tc_ac.start;
-					alt{
-						[] mcaPortIn.receive(mw_request(mw_createSubscription)) -> value v_request {
-							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : Subscription creation request is accepted!");
-
-							//set responseStatusCode back to SUT
-							v_responsePrimitive := valueof(m_responsePrimitive(int2001, v_request.primitive.requestPrimitive.requestIdentifier, omit));
-
-							//send back responsePrimitive
-							mcaPortIn.send(m_response(v_responsePrimitive));
-						}
-						[] mcaPortIn.receive {
-							tc_ac.stop;
-							setverdict(inconc, __SCOPE__, " : Subscription creation request is rejected due to not including mandatory attributes!!");
-						}
-						[] tc_ac.timeout{
-							setverdict(inconc, __SCOPE__, " : Timeout due to no response received from requested SUT!");
-						}
-					}
-					
-
+					// Preamble
+					// create Ae
+					v_aeLocalIndex := f_ae_preamble_registerAe();
+										
 					//Test behavior
-					mcaPortIn.send(m_request(m_notifyAggregatedNotification));
+					v_req := valueof(m_notifyAggregatedNotification);
+					v_req.from_ := PX_TS_CSE1.cseId;
 					
+					f_send(e_mca_port, m_request(v_req));
+
 					tc_ac.start;
 					alt{
-						[] mcaPortIn.receive(mw_response(mw_responsePrimitiveOK)) {
+						[] mcaPort.receive(mw_response(mw_responsePrimitiveOK)) {
 							tc_ac.stop;
-							setverdict(pass, __SCOPE__, " : Notification response is accepted!");
+							setverdict(pass, __SCOPE__ & " : Notification response is accepted!");
 						}
-						[] mcaPortIn.receive {
+						[] mcaPort.receive(mw_response(mw_responsePrimitiveKO)) {
 							tc_ac.stop;
-							setverdict(fail, __SCOPE__, " : Notification response is rejected due to not including mandatory attributes!");
+							setverdict(fail, __SCOPE__ & " : Notification response with wrong response status code");
+						}
+						[] mcaPort.receive(mw_response(?)) {
+							tc_ac.stop;
+							setverdict(fail, __SCOPE__ & " : Unexpected Notification response");
 						}
 						[] tc_ac.timeout{
-							setverdict(fail, __SCOPE__, " : Timeout due to no response received from requested SUT!");
+							setverdict(fail, __SCOPE__ & " : Timeout due to no response received from requested SUT!");
 						}
 					}
  
@@ -2164,6 +2075,97 @@ module OneM2M_Testcases_AE_Release_1 {
 
 
 		}//end SUB subgroup
+		
+		group Polling {
+			
+			/**
+			 * @desc Check that the IUT which performs polling sends the Notify request to <pollingChannelURI> Hosting CSE after receiving response using polling channel
+			 */
+			testcase TC_AE_PCH_001() runs on Tester system AeSystem {
+			   
+				var CseSimu v_cse1 := CseSimu.create("CSE1") alive;
+				v_cse1.start(f_AE_PCH_001());
+				v_cse1.done;
+			}
+			
+			function f_AE_PCH_001() runs on CseSimu system AeSystem {
+			//Local variables
+			  var integer v_pollingChannelIndex := -1;
+			  var integer v_aeIndex := -1;
+			  var MsgIn v_request_req1, v_request_req3;
+			  var RequestPrimitive v_request_req2;
+			  var ResponsePrimitive v_response_rsp1;
+			  var template UtTriggerPrimitive v_utRequest1 := m_utCreateAe;
+			  var template UtTriggerPrimitive v_utRequest2 := m_utCreatePollingChannel;
+			  var template UtTriggerPrimitive v_utRequest3;
+			  var charstring v_action3 := "Please, send a Polling request (Retrieve PollingChannelURI request)";
+			  var RequestPrimitive v_requestNotify;
+   
+			  //Test control
+
+			  // Test component configuration
+			  f_cf03Up();
+
+			  // Test adapter configuration
+
+			   // Preamble
+			  v_aeIndex := f_ae_preamble_registerAe(v_utRequest1);
+   
+   			  f_checkCseSimuStatus();
+			 
+			  //Create a function to receive the Create PollingChannel and to send the response
+			  v_pollingChannelIndex := f_ae_createPollingChannel(v_utRequest2);
+			    				
+			  f_checkCseSimuStatus();
+			  
+			  //Trigger IUT for sending a polling request (req1)
+			  v_utRequest3 := valueof(m_utRetrievePollingChannelUri(f_getLocalResourceAddress(v_pollingChannelIndex) & "/" & c_resourceShortNamePollingChannelUri));
+			  f_sendUtPrimitive(v_utRequest3,v_action3);
+
+			  tc_ac.start;
+			  alt {
+				  [] mcaPortIn.receive(mw_request(mw_retrieve(f_getLocalResourceAddress(v_pollingChannelIndex) & "/" & c_resourceShortNamePollingChannelUri))) -> value v_request_req1 {
+					  tc_ac.stop;
+					  setverdict(pass, __SCOPE__&":INFO: Polling request received successfuly");
+					  v_response_rsp1 := valueof(m_responsePrimitive(int2000,v_request_req1.primitive.requestPrimitive.requestIdentifier));
+					  v_response_rsp1.from_ := PX_TS_CSE1.cseId;
+					  v_response_rsp1.to_ := v_request_req1.primitive.requestPrimitive.from_;
+					  //Put in the primitiveContent a Notify request (req2) (simulated) from another node CSE
+					  v_request_req2 := valueof(m_notify(f_getLocalResourceAddress(v_pollingChannelIndex)));
+					  v_response_rsp1.primitiveContent := { requestPrimitive := v_request_req2 };
+					  mcaPortIn.send(m_response(v_response_rsp1));
+				 }
+				 [] tc_ac.timeout {
+					 setverdict(inconc, __SCOPE__&":INFO: No request received for creating resource type Polling Channel");
+				 }
+			  }
+			  
+			  f_checkCseSimuStatus();
+
+			  tc_ac.start;
+			  alt {
+				  [] mcaPortIn.receive(mw_request(mw_notifyResponsePrimitive(?))) -> value v_request_req3 {
+					  tc_ac.stop;
+					  //Check that primitiveContent carries the response to req2 (resp2)
+					  if(v_request_req3.primitive.requestPrimitive.primitiveContent.responsePrimitive.requestIdentifier == v_request_req2.requestIdentifier) {
+						  setverdict(pass, __SCOPE__ & ": NOTIFY request received carrying response (rsp2) to the Notify request (req2)");
+					  } else {
+						  setverdict(fail, __SCOPE__ & ": NOTIFY request received not carryng the expected response (rsp2) to the Notify request (req2)");
+					  }
+				  }
+				  [] tc_ac.timeout {
+					  setverdict(fail, __SCOPE__ & ": No message while expecting NOTIFY request");
+				  }
+			   }
+
+			  //Postamble
+			  f_cse_postamble_deleteResourcesCSE();
+
+			  // Tear down
+			  f_cf03Down();
+			} 
+		
+		} //end group Polling
 
 
 	}//end group AE

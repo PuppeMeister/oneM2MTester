@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/LibOneM2M/OneM2M_Pixits.ttcn $
- *              $Id: OneM2M_Pixits.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Module containing Pixits for oneM2M
  *
  */
@@ -37,11 +35,6 @@ module OneM2M_Pixits {
 			modulepar boolean PX_ASN_CSE:= false; 
 		
 			/**
-			 * @desc IUT IP address and port 
-			 */
-			modulepar charstring PX_SUT_ADDRESS := "127.0.0.1:8080";
-			
-			/**
 			 * @desc IUT Upper Tester interface support 
 			 */
 			modulepar boolean PX_UT_IMPLEMENTED := false;
@@ -49,22 +42,22 @@ module OneM2M_Pixits {
 			/**
 			 * @desc IUT CSE Name
 			 */	
-			modulepar XSD.ID PX_CSE_NAME := "cseName";
+			modulepar XSD.ID PX_CSE_NAME := "CSE-NAME";
 		
 			/**
 			 * @desc IUT CSE-ID with SP-relative-CSE-ID format (relative) according to TS-0001-7.2-1
 			 */		
-			modulepar XSD.ID PX_CSE_ID := "/cseId";
+			modulepar XSD.ID PX_CSE_ID := "/CSE-ID";
 			
 			/**
 			 * @desc IUT CSE resource ID with Unstructured-CSE-relative-Resource-ID (relative) format according to TS-0001-7.2-1
 			 */			
-			modulepar XSD.ID PX_CSE_RESOURCE_ID	:= "cseResourceId";
+			modulepar XSD.ID PX_CSE_RESOURCE_ID	:= "CSE-ID";
 			 
 			/**
 			 * @desc IUT M2M-SP-ID with M2M-SP-ID format (absolute) according to TS-0001-7.2-1 Unstructured-CSE-relative -Resource-ID
 			 */
-			modulepar XSD.ID PX_SP_ID := "//om2m.org";
+			modulepar XSD.ID PX_SP_ID := "//CSE-SP-ID";
 
 			/**
 			 * @desc AE-ID with privileges to CREATE at the IUT CSEBase with AE-ID-Stem format (relative) according to TS-0001-7.2-1
@@ -74,7 +67,7 @@ module OneM2M_Pixits {
 			/**
 			 * @desc CSE-ID with privileges to CREATE at the IUT CSEBase with SP-relative-CSE-ID format (relative) according to TS-0001-7.2-1
 			 */	
-			modulepar XSD.ID PX_SUPER_CSE_ID				:= "/admin:admin";	
+			modulepar XSD.ID PX_SUPER_CSE_ID				:= "admin:admin";	
 
 			/**
 			 * @desc Allowed AE-IDs starting with C 
@@ -110,17 +103,15 @@ module OneM2M_Pixits {
 			 * @desc Primitive scope to use during test execution 
 			 */			
 			modulepar PrimitiveScope PX_PRIMITIVE_SCOPE 	:= e_cseRelative;
-	
-			/**
-			 * @desc Serialization to use during test execution 
-			 */			
-			modulepar charstring PX_SERIALIZATION			:= "XML";
-	
-			/**
-			 * @desc Protocolo binding to use during test execution 
-			 */			
-			modulepar charstring PX_PROTOCOL_BINDING 		:= "HTTP";		
 			
+			//WebSocket parameters
+			modulepar charstring PX_WS_PROTOCOL    := "oneM2M.R2.0.xml";
+			modulepar charstring PX_REQUEST_URI    := "/";
+			//MQTT parameters
+			modulepar charstring PX_HOSTING_CSE_ID := "CSE-ID";
+			modulepar charstring PX_CREDENTIAL_ID  := "admin:admin";
+			
+			    
 			/**
 			 * @desc Namespace composed of "prefix" = "xml namespace" to use during test execution 
 			 */			
@@ -135,66 +126,144 @@ module OneM2M_Pixits {
 			 * @desc Time given for configuring IUT when required (i.e. when UT not implemented) 
 			 */			
 			modulepar float PX_TCONFIG_IUT					:= 10.0;
-						
+			
 		}
 		
 		group TesterParameters {
-		
-			/**
-			 * @desc AE1 IP address and listening port 
-			 */			
-			modulepar charstring PX_AE1_ADDRESS				:= "127.0.0.1:3141";
 	
 			/**
-			 * @desc AE2 IP address and listening port 
-			 */			
-			modulepar charstring PX_AE2_ADDRESS				:= "127.0.0.1:3142";
-	
-			/**
-			 * @desc CSE1 IP address and listening port 
-			 */			
-			modulepar charstring PX_CSE1_ADDRESS			:= "127.0.0.1:4141";
-	
-			/**
-			 * @desc Test System CSE1 Name
-			 */	
-			modulepar XSD.ID PX_CSE1_NAME := "CSE1_NAME";
-		
-			/**
-			 * @desc Test System CSE1-ID with SP-relative-CSE-ID format (relative) according to TS-0001-7.2-1
-			 */		
-			modulepar XSD.ID PX_CSE1_ID := "/CSE1_ID";
-			
-			/**
-			 * @desc Test System CSE1 resource ID with Unstructured-CSE-relative-Resource-ID (relative) format according to TS-0001-7.2-1
-			 */			
-			modulepar XSD.ID PX_CSE1_RESOURCE_ID	:= "CSE1_RESOURCE_ID";
-			
-			/**
-			 * @desc CSE1 Supported resource type
-			 */	
-			modulepar ResourceTypeList_1 PX_CSE1_SRT := {int1, int2, int3, int16};
-			 
-			/**
-			 * @desc Test System M2M-SP1-ID with M2M-SP-ID format (absolute) according to TS-0001-7.2-1 Unstructured-CSE-relative -Resource-ID
+			 * @desc Test System settings
 			 */
-			modulepar XSD.ID PX_SP1_ID := "//onem2m.org";
-		
-			/**
-			 * @desc Test System AE1-ID with AE-ID-Stem format (relative) according to TS-0001-7.2-1
-			 */			
-			modulepar XSD.ID PX_AE1_ID_STEM				:= "";
-
-			/**
-			 * @desc Test System AE2-ID with AE-ID-Stem format (relative) according to TS-0001-7.2-1
-			 */		
-			modulepar XSD.ID PX_AE2_ID_STEM				:= "";
+			modulepar AeSimuComponentDesc PX_TS_AE1 := { // AE1 component settings
+				aeIdStem := "",
+				appId := "NMyApp1Id",
+				mcaPort := {
+					binding := {
+						httpBindingDesc := {
+								bindingProtocol := e_http,
+								bindingDesc := {
+									tsAddress  := "127.0.0.1",
+									remotePort := 8080,														// SUT CoAP/HTTP port
+									localPort  := 3031,														// Test Adapter client port (for debug purpose only)
+									sutAddress := "127.0.0.1"
+								}
+						}
+					},
+					serialization := e_xml
+				},
+				mcaPortIn := {
+					binding := {
+						httpBindingDesc := {
+							bindingProtocol := e_http,
+							bindingDesc := {
+								tsAddress  := "127.0.0.1",
+								remotePort := 8080,
+								localPort  := 3041,															// Test Adapter listener port (AeSimu acts as server)
+								sutAddress := "127.0.0.1"
+							}
+						}
+					},
+					serialization := e_xml
+				}
+			};
+			modulepar AeSimuComponentDesc PX_TS_AE2 := { // AE2 component settings
+				aeIdStem := "",
+				appId := "NMyApp2Id",
+				mcaPort := {
+					binding := {
+						httpBindingDesc := {
+								bindingProtocol := e_http,
+								bindingDesc := {
+									tsAddress  := "127.0.0.1",
+									remotePort := 8080,														// SUT CoAP/HTTP port
+									localPort  := 3032,														// Test Adapter client port (for debug purpose only)
+									sutAddress := "127.0.0.1"
+								}
+						}
+					},
+					serialization := e_xml
+				},
+				mcaPortIn := {
+					binding := {
+						httpBindingDesc := {
+							bindingProtocol := e_http,
+							bindingDesc := {
+								tsAddress  := "127.0.0.1",
+								remotePort := omit,
+								localPort  := 3042,														// Test Adapter listener port (AeSimu acts as server)
+								sutAddress := "127.0.0.1"
+							}
+						}
+					},
+					serialization := e_xml
+				}
+			};
+			modulepar CseSimuComponentDesc PX_TS_CSE1 := { // CSE1 component settings
+				cseName := "CSE1_NAME",
+				cseId := "/CSE1_ID",
+				cseResourceId := "CSE1_RESOURCE_ID",
+				spId := "//onem2m.org",
+				supportedResourceType := {int1, int2, int3, int16},
+				mcaPort := {
+					binding := {
+						httpBindingDesc := {
+							bindingProtocol := e_http,
+							bindingDesc := {
+								tsAddress := "127.0.0.1",
+								remotePort:= 8080,
+								localPort := 3131,
+								sutAddress := "127.0.0.1"
+							}
+						}
+					},
+					serialization := e_xml
+				},
+				mcaPortIn := {
+					binding := {
+						httpBindingDesc := {
+							bindingProtocol := e_http,
+							bindingDesc := {
+								tsAddress := "127.0.0.1",
+								remotePort:= 8080,
+								localPort  := 3141,
+								sutAddress := "127.0.0.1"
+							}
+						}
+					},
+					serialization := e_xml
+				},
+				mccPort := {
+					binding := {
+						httpBindingDesc := {
+							bindingProtocol := e_http,
+							bindingDesc := {
+								tsAddress := "127.0.0.1",
+								remotePort:= 8080,
+								localPort := 4131,
+								sutAddress := "127.0.0.1"
+							}
+						}
+					},
+					serialization := e_xml
+				},
+				mccPortIn := {
+					binding := {
+						httpBindingDesc := {
+							bindingProtocol := e_http ,
+							bindingDesc := {
+								tsAddress := "127.0.0.1",
+								remotePort:= 8080,
+								localPort  := 4141,
+								sutAddress := "127.0.0.1"
+							}
+						}
+					},
+					serialization := e_xml
+				}
+			};
 			
-			/**
-			 * @desc Test System APP-ID with App-ID format according to TS-0001-7.2-1
-			 */		
-			modulepar XSD.ID PX_APP_ID 					:= "NMyAppId";
-
+			modulepar UtDesc PX_TS_UT := { url := "http://127.0.0.1:43000/" };
+					
 		}
 		
 		group ExecutionParameters {
@@ -202,7 +271,7 @@ module OneM2M_Pixits {
 			/**
 			 * @desc Resources to be deleted by TC_DELETE_RESOURCES 
 			 */			
-			modulepar XSD.IDREFS PX_RESOURCES_TO_BE_DELETED := {"MyAe"};
+			modulepar XSD.IDREFS PX_RESOURCES_TO_BE_DELETED := { "MyAe", "MyAccessControlPolicyResource", "SubscriptionVerificationAcp", "MyAcp", "MyRemoteCSEResource" };
 	
 			/**
 			 * @desc To enable run postamble (for debugging) 
@@ -211,7 +280,7 @@ module OneM2M_Pixits {
 		}
 	
 	//constant parameters for LOC  
-	modulepar XSD.Token PX_LOCATION_TARGET_ID				:= "{LOCATION-TARGET-ID}"; //SUPPOSE TO BE RECEIVED FROM LOCATION SERVER
+	modulepar LocationTargetID PX_LOCATION_TARGET_ID				:= {alt_ := "{LOCATION-TARGET-ID}"}; //SUPPOSE TO BE RECEIVED FROM LOCATION SERVER
 	modulepar XSD.AnyURI PX_LOCATION_SERVER_ADDRESS		:= "{LOCATION-SERVER-ADDRESS}";
 	
 	modulepar charstring PX_LOCATION_UPDATE_PERIOD			:= "PT10M10S" ;//10 Minute 10 Seconds

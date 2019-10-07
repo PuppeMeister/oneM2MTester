@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/OneM2M_TestControl.ttcn $
- *              $Id: OneM2M_TestControl.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Test control module for oneM2M
  *
  */

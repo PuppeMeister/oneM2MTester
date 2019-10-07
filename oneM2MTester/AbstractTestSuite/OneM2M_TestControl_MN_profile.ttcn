@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/OneM2M_TestControl.ttcn $
- *              $Id: OneM2M_TestControl.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Test control module for oneM2M
  *
  */
@@ -15,6 +13,7 @@ module OneM2M_TestControl_MN_profile {
 
 
 	import from OneM2M_Testcases_CSE_Release_1 all;	
+	import from OneM2M_Testcases_CSE_Release_2 all;	
 	import from OneM2M_Pics all;
 
 	control {	
@@ -44,8 +43,133 @@ module OneM2M_TestControl_MN_profile {
 		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_002_CSR());}
 		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_002_SPR());}
 		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_002_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_CRE_003_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_CRE_003_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_CRE_003_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_RET_003_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_RET_003_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_RET_003_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_UPD_003_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_UPD_003_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_UPD_003_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_003_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_003_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_003_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_CRE_004_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_CRE_004_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_CRE_004_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_RET_004_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_RET_004_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_RET_004_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_UPD_004_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_UPD_004_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_UPD_004_ABS());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_004_CSR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_004_SPR());}
+		if(PICS_STRUCTURED_CSE_RELATIVE_RESOURCE_ID_FORMAT) {execute (TC_CSE_GEN_DEL_004_ABS());}
 		
 		//CE_GEN_00002 
+		if(true) {execute (TC_CSE_RT_BR_001_CRE());}
+		if(true) {execute (TC_CSE_RT_BR_001_RET());}
+		if(true) {execute (TC_CSE_RT_BR_001_UPD());}
+		if(true) {execute (TC_CSE_RT_BR_001_DEL());}
+		
+		if(true) {execute (TC_CSE_DMR_CRE_015_CNT());}
+		if(true) {execute (TC_CSE_DMR_CRE_015_GRP());}
+		if(true) {execute (TC_CSE_DMR_CRE_015_ACP());}
+		if(true) {execute (TC_CSE_DMR_CRE_015_SUB());}
+		if(true) {execute (TC_CSE_DMR_CRE_015_PCH());}
+		if(true) {execute (TC_CSE_DMR_CRE_016_CNT());}
+		if(true) {execute (TC_CSE_DMR_CRE_016_GRP());}
+		if(true) {execute (TC_CSE_DMR_CRE_016_ACP());}
+		if(true) {execute (TC_CSE_DMR_CRE_016_SUB());}
+		if(true) {execute (TC_CSE_DMR_CRE_016_PCH());}
+		if(true) {execute (TC_CSE_DMR_CRE_017_CNT());}
+		if(true) {execute (TC_CSE_DMR_CRE_017_GRP());}
+		if(true) {execute (TC_CSE_DMR_CRE_017_ACP());}
+		if(true) {execute (TC_CSE_DMR_CRE_017_SUB());}
+		if(true) {execute (TC_CSE_DMR_CRE_017_PCH());}
+		if(true) {execute (TC_CSE_DMR_CRE_019_CNT());}
+		if(true) {execute (TC_CSE_DMR_CRE_019_GRP());}
+		if(true) {execute (TC_CSE_DMR_CRE_019_ACP());}
+		if(true) {execute (TC_CSE_DMR_CRE_019_SUB());}
+		if(true) {execute (TC_CSE_DMR_CRE_019_PCH());}
+		if(true) {execute (TC_CSE_DMR_CRE_020_CNT());}
+		if(true) {execute (TC_CSE_DMR_CRE_020_GRP());}
+		if(true) {execute (TC_CSE_DMR_CRE_020_ACP());}
+		if(true) {execute (TC_CSE_DMR_CRE_020_SUB());}
+		if(true) {execute (TC_CSE_DMR_CRE_020_PCH());}
+		if(true) {execute (TC_CSE_DMR_RET_020_RCN_0());}
+		if(true) {execute (TC_CSE_DMR_RET_020_RCN_2());}
+		if(true) {execute (TC_CSE_DMR_RET_020_RCN_3());}
+		if(true) {execute (TC_CSE_DMR_RET_020_RCN_9());}
+		if(true) {execute (TC_CSE_DMR_RET_021_CNT());}
+		if(true) {execute (TC_CSE_DMR_RET_021_GRP());}
+		if(true) {execute (TC_CSE_DMR_RET_021_ACP());}
+		if(true) {execute (TC_CSE_DMR_RET_021_SUB());}
+		if(true) {execute (TC_CSE_DMR_RET_021_PCH());}
+		if(true) {execute (TC_CSE_DMR_UPD_019_RCN_2());}
+		if(true) {execute (TC_CSE_DMR_UPD_019_RCN_3());}
+		if(true) {execute (TC_CSE_DMR_UPD_020_CNT());}
+		if(true) {execute (TC_CSE_DMR_UPD_020_GRP());}
+		if(true) {execute (TC_CSE_DMR_UPD_020_ACP());}
+		if(true) {execute (TC_CSE_DMR_UPD_021_CNT());}
+		if(true) {execute (TC_CSE_DMR_UPD_021_GRP());}
+		if(true) {execute (TC_CSE_DMR_UPD_021_ACP());}
+		if(true) {execute (TC_CSE_DMR_UPD_022_CNT());}
+		if(true) {execute (TC_CSE_DMR_UPD_022_GRP());}
+		if(true) {execute (TC_CSE_DMR_UPD_022_ACP());}
+		if(true) {execute (TC_CSE_DMR_DEL_011_RCN_2());}
+		if(true) {execute (TC_CSE_DMR_DEL_011_RCN_3());}
+		if(true) {execute (TC_CSE_DMR_DEL_011_RCN_9());}
+		if(true) {execute (TC_CSE_DMR_DEL_012_CNT());}
+		if(true) {execute (TC_CSE_DMR_DEL_012_GRP());}
+		if(true) {execute (TC_CSE_DMR_DEL_012_ACP());}
+		if(true) {execute (TC_CSE_DMR_DEL_013_CNT());}
+		if(true) {execute (TC_CSE_DMR_DEL_013_GRP());}
+		if(true) {execute (TC_CSE_DMR_DEL_013_ACP());}
+				
+		if(true) {execute (TC_CSE_RT_NBS_001_CRE());}
+		if(true) {execute (TC_CSE_RT_NBS_001_UPD());}
+		if(true) {execute (TC_CSE_RT_NBS_001_RET());}
+		if(true) {execute (TC_CSE_RT_NBS_001_DEL());}
+		if(true) {execute (TC_CSE_RT_NBS_002_CRE());}
+		if(true) {execute (TC_CSE_RT_NBS_002_UPD());}
+		if(true) {execute (TC_CSE_RT_NBS_002_RET());}
+		if(true) {execute (TC_CSE_RT_NBS_002_DEL());}
+		if(true) {execute (TC_CSE_RT_NBS_003_CRE());}
+		if(true) {execute (TC_CSE_RT_NBS_003_UPD());}
+		if(true) {execute (TC_CSE_RT_NBS_003_RET());}
+		if(true) {execute (TC_CSE_RT_NBS_003_DEL());}
+		if(true) {execute (TC_CSE_RT_NBA_001_CRE());}
+		if(true) {execute (TC_CSE_RT_NBA_001_UPD());}
+		if(true) {execute (TC_CSE_RT_NBA_001_RET());}
+		if(true) {execute (TC_CSE_RT_NBA_001_DEL());}
+		if(true) {execute (TC_CSE_RT_NBA_002_CRE());}
+		if(true) {execute (TC_CSE_RT_NBA_002_UPD());}
+		if(true) {execute (TC_CSE_RT_NBA_002_RET());}
+		if(true) {execute (TC_CSE_RT_NBA_002_DEL());}
+		if(true) {execute (TC_CSE_RT_NBA_003_CRE());}
+		if(true) {execute (TC_CSE_RT_NBA_003_UPD());}
+		if(true) {execute (TC_CSE_RT_NBA_003_RET());}
+		if(true) {execute (TC_CSE_RT_NBA_003_DEL());}
+		if(true) {execute (TC_CSE_RT_NBA_004_CRE());}
+		if(true) {execute (TC_CSE_RT_NBA_004_UPD());}
+		if(true) {execute (TC_CSE_RT_NBA_004_RET());}
+		if(true) {execute (TC_CSE_RT_NBA_004_DEL());}
+		if(true) {execute (TC_CSE_RT_NBA_005_CRE());}
+		if(true) {execute (TC_CSE_RT_NBA_005_UPD());}
+		if(true) {execute (TC_CSE_RT_NBA_005_RET());}
+		if(true) {execute (TC_CSE_RT_NBA_005_DEL());}
+		
+		if(true) {execute (TC_CSE_DMR_001_CRE());}
+		if(true) {execute (TC_CSE_DMR_001_UPD());}
+		if(true) {execute (TC_CSE_DMR_001_RET());}
+		if(true) {execute (TC_CSE_DMR_001_DEL());}
+		if(true) {execute (TC_CSE_DMR_002_CRE());}
+		if(true) {execute (TC_CSE_DMR_002_UPD());}
+		if(true) {execute (TC_CSE_DMR_002_RET());}
+		if(true) {execute (TC_CSE_DMR_002_DEL());}
 		
 		//CE_REG_00001
 		if(true) {execute (TC_CSE_REG_CRE_021());}
@@ -58,21 +182,24 @@ module OneM2M_TestControl_MN_profile {
 		if(PICS_CB_NL) {execute (TC_CSE_REG_RET_002_NL());}
 
 		//CE_REG_00002
+		if(true) {execute (TC_CSE_REG_CRE_016());}
+		if(true) {execute (TC_CSE_REG_CRE_017_API());}
+		if(true) {execute (TC_CSE_REG_CRE_017_RR());}
 		if(true) {execute (TC_CSE_REG_RET_003());}
 		if(true) {execute (TC_CSE_REG_DEL_003());}
 		if(true) {execute (TC_CSE_DMR_RET_013_AE());} 
 		if(true) {execute (TC_CSE_DMR_UPD_016_AE_ET());}
 		if(true) {execute (TC_CSE_DMR_UPD_016_AE_RR());}
+		
 		if(true) {execute (TC_CSE_REG_CRE_004());}
+		
 		if(true) {execute (TC_CSE_REG_CRE_005());}
 		if(PICS_MN_CSE or PICS_ASN_CSE) {execute (TC_CSE_REG_CRE_006());}
 		if(PICS_MN_CSE) {execute (TC_CSE_REG_CRE_007());}
 		if(PICS_MN_CSE) {execute (TC_CSE_REG_CRE_008());}
 		if(PICS_MN_CSE) {execute (TC_CSE_REG_CRE_010());}
 		if(true) {execute (TC_CSE_REG_CRE_011());}
-		if(true) {execute (TC_CSE_REG_CRE_016());}
-		if(true) {execute (TC_CSE_REG_CRE_017_API());}
-		if(true) {execute (TC_CSE_REG_CRE_017_RR());}
+		
 		if(true) {execute (TC_CSE_REG_CRE_022());}
 		if(true) {execute (TC_CSE_REG_CRE_023());}
 		if(PICS_AE_LBL) {execute (TC_CSE_REG_CRE_012_AE_LBL());}
@@ -84,10 +211,10 @@ module OneM2M_TestControl_MN_profile {
 		if(PICS_AE_POA) {execute (TC_CSE_REG_CRE_012_AE_POA());}
 		if(PICS_AE_POA) {execute (TC_CSE_REG_RET_004_POA());}
 		if(PICS_AE_POA) {execute (TC_CSE_DMR_UPD_015_AE_POA());}
-		if(true) {execute (TC_CSE_REG_CRE_002());}
-		//if(true) {execute (TC_CSE_REG_CRE_003());} //TO BE IMPLEMENTED
-		if(PICS_MN_CSE or PICS_ASN_CSE) {execute (TC_CSE_REG_CRE_020());}
-
+		if(true) {execute (TC_CSE_REG_CRE_001_CAE());}
+		if(true) {execute (TC_CSE_REG_CRE_002_CAE());}
+		if(true) {execute (TC_CSE_REG_CRE_003());} //TO BE IMPLEMENTED
+		
 		//CE_REG_00004
 		if(true) {execute (TC_CSE_REG_CRE_018());}
 		if(true) {execute (TC_CSE_REG_CRE_019());}
@@ -139,14 +266,15 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_DMR_CRE_001_CNT_CNT());}
 		if(true) {execute (TC_CSE_DMR_CRE_002_CNT());}
 		if(true) {execute (TC_CSE_DMR_CRE_003_CNT());}
-		if(true) {execute (TC_CSE_DMR_CRE_007 ());}
-		if(true) {execute (TC_CSE_DMR_CRE_008 ());}
+		if(true) {execute (TC_CSE_DMR_CRE_007_CNT_CIN ());}
+		if(true) {execute (TC_CSE_DMR_CRE_008_CNT_CIN ());}
 		if(true) {execute (TC_CSE_DMR_CRE_009 ());}
 		if(true) {execute (TC_CSE_DMR_CRE_010 ());}
 		if(true) {execute (TC_CSE_DMR_CRE_011 ());}
+		if(true) {execute (TC_CSE_DMR_CRE_013_CNT_CIN());}
+		if(true) {execute (TC_CSE_DMR_CRE_014_CNT_CIN ());}
 		if(true) {execute (TC_CSE_DMR_RET_001_CNT());}
 		if(true) {execute (TC_CSE_DMR_RET_013_CNT());}
-		if(true) {execute (TC_CSE_DMR_CRE_014_CNT_CIN ());}
 		if(true) {execute (TC_CSE_DMR_UPD_001_CNT_LBL());}
 		if(PICS_CNT_LBL) {execute (TC_CSE_DMR_UPD_002_CNT_LBL());}
 		if(PICS_CNT_LBL) {execute (TC_CSE_DMR_UPD_003_CNT_LBL());}
@@ -154,15 +282,17 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_DMR_UPD_005());}
 		if(true) {execute (TC_CSE_DMR_UPD_007_CNT_CT());}
 		if(true) {execute (TC_CSE_DMR_UPD_009_CNT_EXC());}
-		if(true) {execute (TC_CSE_DMR_UPD_010());}
+		if(true) {execute (TC_CSE_DMR_UPD_010_CNT());}
 		if(true) {execute (TC_CSE_DMR_UPD_016_CNT_ET());}
 		if(true) {execute (TC_CSE_DMR_DEL_001_CNT());}
-		if(true) {execute (TC_CSE_DMR_DEL_005 ());}
-		if(true) {execute (TC_CSE_DMR_DEL_006());}
+		if(true) {execute (TC_CSE_DMR_DEL_005_CNT ());}
+		if(true) {execute (TC_CSE_DMR_DEL_006_CNT_CIN());}
 		if(PICS_CNT_LBL) {execute (TC_CSE_DMR_CRE_012_CNT_LBL());}
 		if(PICS_CNT_LBL) {execute (TC_CSE_DMR_UPD_014_CNT_LBL());}
 		if(PICS_CNT_LBL) {execute (TC_CSE_DMR_UPD_015_CNT_LBL());}
+
 		if(PICS_CNT_CR) {execute (TC_CSE_DMR_CRE_012_CNT_CR());}
+
 		if(true) {execute (TC_CSE_DMR_CRE_005_MNI());}
 		if(true) {execute (TC_CSE_DMR_CRE_006_MNI());}
 		if(PICS_CNT_MNI) {execute (TC_CSE_DMR_CRE_012_CNT_MNI());}
@@ -171,7 +301,7 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_DMR_CRE_005_MBS());}
 		if(true) {execute (TC_CSE_DMR_CRE_006_MBS());}
 		if(PICS_CNT_MBS) {execute (TC_CSE_DMR_CRE_012_CNT_MBS());}
-		if(true) {execute (TC_CSE_DMR_CRE_013());}
+		if(true) {execute (TC_CSE_DMR_CRE_013_CNT_CIN());}
 		if(PICS_CNT_MBS) {execute (TC_CSE_DMR_UPD_014_CNT_MBS());}
 		if(PICS_CNT_MBS) {execute (TC_CSE_DMR_UPD_015_CNT_MBS());}
 		if(true) {execute (TC_CSE_DMR_CRE_005_MIA());}
@@ -183,14 +313,18 @@ module OneM2M_TestControl_MN_profile {
 		//CE_DMR_00002
 		if(true) {execute (TC_CSE_DMR_CRE_001_CIN_CNT());}
 		if(true) {execute (TC_CSE_DMR_RET_001_CIN());}
-		if(true) {execute (TC_CSE_DMR_UPD_011());}
+		if(true) {execute (TC_CSE_DMR_UPD_011_CNT_CIN());}
 		if(true) {execute (TC_CSE_DMR_DEL_001_CIN());}
+		
 		if(PICS_CIN_LBL) {execute (TC_CSE_DMR_CRE_012_CIN_LBL());}
 		if(PICS_CIN_CR) {execute (TC_CSE_DMR_CRE_012_CIN_CR());}
+		
 		if(PICS_CIN_CNF) {execute (TC_CSE_DMR_CRE_012_CIN_CNF());}
+		
 		if(true) {execute (TC_CSE_DMR_RET_012());}
 		if(true) {execute (TC_CSE_DMR_UPD_012());}
 		if(true) {execute (TC_CSE_DMR_DEL_007());}
+		
 		if(true) {execute (TC_CSE_DMR_RET_010());}
 		if(true) {execute (TC_CSE_DMR_UPD_013());}
 		if(true) {execute (TC_CSE_DMR_DEL_009());}
@@ -216,18 +350,36 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_DMR_UPD_016_SUB_NU());}
 		if(true) {execute (TC_CSE_DMR_UPD_016_SUB_NCT());}
 		if(true) {execute (TC_CSE_DMR_DEL_001_SUB());}
+		
 		if(PICS_SUB_LBL) {execute (TC_CSE_DMR_CRE_012_SUB_LBL());}
 		if(PICS_SUB_LBL) {execute (TC_CSE_DMR_UPD_014_SUB_LBL());}
 		if(PICS_SUB_LBL) {execute (TC_CSE_DMR_UPD_015_SUB_LBL());}
 		if(PICS_SUB_CR) {execute (TC_CSE_DMR_CRE_012_SUB_CR());}
 
+		if(true) {execute (TC_CSE_DMR_CRE_012_SUB_SU());}		
+		
 		//CE_SUB_00004
 		if(true) {execute (TC_CSE_SUB_CRE_001_SUB());}
 		if(true) {execute (TC_CSE_SUB_CRE_001_CIN());}
 		if(true) {execute (TC_CSE_SUB_CRE_003());}
 		if(true) {execute (TC_CSE_SUB_CRE_005());}
+		
 		if(true) {execute (TC_CSE_SUB_UPD_001());}
+		if(true) {execute (TC_CSE_SUB_UPD_002());}
+		if(true) {execute (TC_CSE_SUB_UPD_003());}
+		if(true) {execute (TC_CSE_SUB_UPD_004());}
+		if(true) {execute (TC_CSE_SUB_UPD_005());}
+		if(true) {execute (TC_CSE_SUB_UPD_006());}
+		if(true) {execute (TC_CSE_SUB_UPD_007());}
+		if(true) {execute (TC_CSE_SUB_UPD_008());}
+		if(true) {execute (TC_CSE_SUB_UPD_009());}
 		if(true) {execute (TC_CSE_SUB_DEL_001());}
+		if(true) {execute (TC_CSE_SUB_DEL_002());}
+		if(true) {execute (TC_CSE_SUB_DEL_003());}
+		if(PICS_SUBSCRIPTION_VERIFICATION) {execute (TC_CSE_SUB_NTF_001());}
+		if(PICS_SUBSCRIPTION_VERIFICATION) {execute (TC_CSE_SUB_NTF_002());}
+		if(true) {execute (TC_CSE_SUB_NTF_003());}
+
 		if(true) {execute (TC_CSE_SUB_CRE_004());}
 
 		//CE_SEC_00001
@@ -262,18 +414,23 @@ module OneM2M_TestControl_MN_profile {
 		if(PICS_CNT_ACPI) {execute (TC_CSE_DMR_UPD_014_CNT_ACPI());}
 		if(PICS_AE_ACPI) {execute (TC_CSE_DMR_UPD_015_AE_ACPI());}
 		if(PICS_CNT_ACPI) {execute (TC_CSE_DMR_UPD_015_CNT_ACPI());}
+		if(PICS_GRP_ACPI) {execute (TC_CSE_DMR_UPD_015_GRP_ACPI());}
 		if(PICS_SUB_ACPI) {execute (TC_CSE_DMR_UPD_015_SUB_ACPI());}
 		if(true) {execute (TC_CSE_SEC_ACP_UPD_001());}
 		if(true) {execute (TC_CSE_SEC_ACP_UPD_002());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_CRE_004_CNT());}
+		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_CRE_004_GRP());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_CRE_004_ACP());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_CRE_004_SUB());}
+		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_CRE_004_PCH());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_003_ACP());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_003_CNT());}
+		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_003_GRP());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_003_SUB());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_ACP());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_AE());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_CNT());}
+		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_GRP());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_CSR());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_SUB());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_UPD_006_CNT_LBL());}
@@ -332,31 +489,17 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_SEC_ACP_012_RET());}
 		if(true) {execute (TC_CSE_SEC_ACP_012_DEL());}		
 	
-		//Extendable Feature set
-		if(true) {execute (TC_CSE_DIS_001());}
-		if(true) {execute (TC_CSE_DIS_002());}
-		if(true) {execute (TC_CSE_DIS_003());}
-		if(true) {execute (TC_CSE_DIS_004());}
-		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DIS_005());}
-		if(true) {execute (TC_CSE_DIS_006());}
-		if(true) {execute (TC_CSE_DIS_007());}
-		if(true) {execute (TC_CSE_DIS_008_CRB_CRA());}
-		if(true) {execute (TC_CSE_DIS_008_MS_US());}
-		if(true) {execute (TC_CSE_DIS_008_STS_STB());}
-		if(true) {execute (TC_CSE_DIS_008_EXB_EXA());}
-		if(true) {execute (TC_CSE_DIS_009());}
+		//CE_GMG_00001
 		if(true) {execute (TC_CSE_DMR_CRE_001_GRP_CB());}
 		if(true) {execute (TC_CSE_DMR_CRE_001_GRP_AE());}
 		if(true) {execute (TC_CSE_DMR_CRE_002_GRP());}
 		if(true) {execute (TC_CSE_DMR_CRE_003_GRP());}
-		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_CRE_004_GRP());}
 		if(true) {execute (TC_CSE_DMR_RET_001_GRP());}
 		if(true) {execute (TC_CSE_DMR_RET_013_GRP());}
-		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_RET_014_GRP());}
 		if(true) {execute (TC_CSE_DMR_UPD_001_GRP_LBL());}
 		if(PICS_GRP_LBL) {execute (TC_CSE_DMR_UPD_002_GRP_LBL());}
 		if(PICS_GRP_LBL) {execute (TC_CSE_DMR_UPD_003_GRP_LBL());}
-		if(true) {execute (TC_CSE_DMR_UPD_004_GRP_ET_GN_LBL());}
+		if(PICS_GRP_GN and PICS_GRP_LBL) {execute (TC_CSE_DMR_UPD_004_GRP_ET_GN_LBL());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DMR_UPD_006_GRP_LBL());}
 		if(true) {execute (TC_CSE_DMR_UPD_007_GRP_CT());}
 		if(true) {execute (TC_CSE_DMR_UPD_008_GRP_MNM());}
@@ -373,7 +516,7 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_GMG_UPD_008());}
 		if(PICS_GRP_LBL) {execute (TC_CSE_DMR_UPD_015_GRP_LBL());}
 		if(PICS_GRP_GN) {execute (TC_CSE_DMR_UPD_015_GRP_GN());}
-		if(PICS_GRP_ACPI) {execute (TC_CSE_DMR_UPD_015_GRP_ACPI());}
+		
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_CRE_002());}
 		if(true) {execute (TC_CSE_GMG_CRE_004());}
 		if(true) {execute (TC_CSE_GMG_CRE_005());}
@@ -386,6 +529,7 @@ module OneM2M_TestControl_MN_profile {
 		if(true) {execute (TC_CSE_GMG_UPD_006());}
 		if(true) {execute (TC_CSE_GMG_UPD_009());}
 		if(true) {execute (TC_CSE_GMG_UPD_010());}
+		
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_RET_001());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_001_CRE());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_001_RET());}
@@ -411,8 +555,46 @@ module OneM2M_TestControl_MN_profile {
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_006_RET());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_006_UPD());}
 		if(PICS_ACP_SUPPORT) {execute (TC_CSE_GMG_006_DEL());}
-		if(PICS_GRP_MACP) {execute (TC_CSE_DMR_UPD_015_GRP_MACP());}
+		//if(PICS_GRP_MACP) {execute (TC_CSE_DMR_UPD_015_GRP_MACP());}
+		
+		//CE_DIS_00001
+		if(true) {execute (TC_CSE_DIS_001());}
+		if(true) {execute (TC_CSE_DIS_004());}
+		if(PICS_ACP_SUPPORT) {execute (TC_CSE_DIS_005());}
+		if(true) {execute (TC_CSE_DIS_006());}
+		
+		if(true) {execute (TC_CSE_DIS_002());}
+		if(true) {execute (TC_CSE_DIS_003());}
+		if(true) {execute (TC_CSE_DIS_007());}
+		if(true) {execute (TC_CSE_DIS_008_CRB_CRA());}
+		if(true) {execute (TC_CSE_DIS_008_MS_US());}
+		if(true) {execute (TC_CSE_DIS_008_STS_STB());}
+		if(true) {execute (TC_CSE_DIS_008_EXB_EXA());}
+		if(true) {execute (TC_CSE_DIS_009());}
+		if(true) {execute (TC_CSE_DIS_010());}
+		if(true) {execute (TC_CSE_DIS_011());}
+		
+		//CE_PCH_001
+		if(true) {execute (TC_CSE_DMR_CRE_001_PCH_AE());}
+		if(true) {execute (TC_CSE_DMR_CRE_002_PCH());}
+		if(true) {execute (TC_CSE_DMR_CRE_003_PCH());}
+		if(true) {execute (TC_CSE_DMR_RET_001_PCH());}
+		if(true) {execute (TC_CSE_DMR_UPD_001_PCH_LBL());}
+		if(true) {execute (TC_CSE_DMR_UPD_002_PCH_LBL());}
+		if(true) {execute (TC_CSE_DMR_UPD_003_PCH_LBL());}
+		if(true) {execute (TC_CSE_DMR_UPD_007_PCH_CT());}
+		if(true) {execute (TC_CSE_DMR_UPD_009_PCH_EXC());}
+		if(true) {execute (TC_CSE_DMR_DEL_001_PCH());}
+		
+		if(true) {execute (TC_CSE_PCH_001());}
+		if(true) {execute (TC_CSE_PCH_002());}
+		if(true) {execute (TC_CSE_PCH_003());}
+		if(true) {execute (TC_CSE_PCH_004());}
+		if(true) {execute (TC_CSE_PCH_005_RET());}
+		if(true) {execute (TC_CSE_PCH_005_UPD());}
+		if(true) {execute (TC_CSE_PCH_005_DEL());}
+		if(true) {execute (TC_CSE_PCH_006());}
 	}
 
-}  // end of module OneM2M_TestControl_IN_profile
+}  // end of module OneM2M_TestControl_MN_profile
 

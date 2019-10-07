@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/OneM2M_TestControl.ttcn $
- *              $Id: OneM2M_TestControl.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Test control module for oneM2M
  *
  */
@@ -49,11 +47,24 @@ module OneM2M_TestControl_ADN_profile_3 {
 		//AE_REG_00002
 		if(true) {execute (TC_AE_REG_CRE_001());}
 		if(true) {execute (TC_AE_REG_CRE_002_RR());}
+		if(true) {execute (TC_AE_REG_CRE_002_API());}
+		if(true) {execute (TC_AE_REG_CRE_002_SRV());}
+		
+		//Container ADN-3
 		//AE_DMR_00001 
 		if(true) {execute (TC_AE_DMR_CRE_001());}
 		//AE_DMR_00002
 		if(true) {execute (TC_AE_DMR_CRE_002());}
 		
+		//FlexcContainer ADN-3
+		//AE_DMR_00003
+		//TODO Missing
+		
+		//TimeSeries ADN-3
+		//AE_DMR_00004 
+		//TODO Missing
+		//AE_DMR_00005
+		//TODO Missing 
 	}		
 
 }  // end of module OneM2M_TestControl_ADN_profile_3

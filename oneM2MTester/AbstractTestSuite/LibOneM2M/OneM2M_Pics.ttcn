@@ -1,13 +1,11 @@
-/* 
+/** 
  *  Copyright Notification
  *  No part of this document may be reproduced, in an electronic retrieval system or otherwise, except as authorized by written permission.
  *  The copyright and the foregoing restriction extend to reproduction in all media.
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/LibOneM2M/OneM2M_Pics.ttcn $
- *              $Id: OneM2M_Pics.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Module containing Pixits for oneM2M
  *
  */
@@ -139,6 +137,24 @@ module OneM2M_Pics {
 			modulepar boolean PICS_SUB_LN := true;
 			modulepar boolean PICS_SUB_PSN := true;
 			modulepar boolean PICS_SUB_CR := true;
+		}
+		
+		/**
+		 * @desc Requests handling
+		 * @see  oneM2M TS-0017 A.5.4-1
+		 */
+		group NonBlocking {
+			modulepar boolean PICS_BLOCKING_REQUEST := true;	
+			modulepar boolean PICS_NON_BLOCKING_REQUEST_SYNCH := true;	
+			modulepar boolean PICS_NON_BLOCKING_REQUEST_ASYNCH := true;
+		}
+		
+		/**
+		 * @desc Subscription capabilities
+		 * @see  oneM2M TS-0017 A.5.4-1
+		 */
+		group Subscription_capabilities{
+			modulepar boolean PICS_SUBSCRIPTION_VERIFICATION := true;	
 		}
 	}
 	

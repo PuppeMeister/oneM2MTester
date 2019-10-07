@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/OneM2M_TestControl.ttcn $
- *              $Id: OneM2M_TestControl.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Test control module for oneM2M
  *
  */
@@ -55,6 +53,8 @@ module OneM2M_TestControl_ADN_profile_4 {
 		//AE_REG_00002
 		if(true) {execute (TC_AE_REG_CRE_001());}
 		if(true) {execute (TC_AE_REG_CRE_002_RR());}
+		if(true) {execute (TC_AE_REG_CRE_002_API());}
+		if(true) {execute (TC_AE_REG_CRE_002_SRV());}
 		if(true) {execute (TC_AE_REG_CRE_002_RN());}
 		if(true) {execute (TC_AE_REG_CRE_002_ET());}
 		if(true) {execute (TC_AE_REG_CRE_002_LBL());}
@@ -100,28 +100,7 @@ module OneM2M_TestControl_ADN_profile_4 {
 		if(true) {execute (TC_AE_DMR_DEL_004());}
 		if(true) {execute (TC_AE_DMR_DEL_001());}
 		if(true) {execute (TC_AE_DMR_DEL_002());}
-
-		//Extendable features
-		//AE/REG/00002
-		if(true) {execute (TC_AE_REG_CRE_002_API());}
-		if(true) {execute (TC_AE_REG_CRE_002_OR());}
-		if(true) {execute (TC_AE_DMR_UPD_001_OR());}
-		// AE/DMR/00001
-		if(PICS_CNT_ACPI) {execute (TC_AE_DMR_CRE_004_ACPI());}
-		if(PICS_CNT_OR) {execute (TC_AE_DMR_CRE_004_OR());}
-		//if(true) {execute (TC_AE_DMR_CRE_004_LI());}//TODO To be implemented
-		//AE/SUB/00001
-		//if(true) {execute (TC_AE_SUB_CRE_002_LBL());}//TODO To be implemented. TP As well
-		if(PICS_SUB_SU) {execute (TC_AE_SUB_CRE_002_SU());}
-		if(PICS_SUB_ACPI) {execute (TC_AE_SUB_CRE_002_ACPI());}
-		if(PICS_SUB_ENC) {execute (TC_AE_SUB_CRE_002_ENC());}
-		if(PICS_SUB_EXC) {execute (TC_AE_SUB_CRE_002_EXC());}
-		if(PICS_SUB_NFU) {execute (TC_AE_SUB_CRE_002_NFU());}
-		if(PICS_SUB_NCT) {execute (TC_AE_SUB_CRE_002_NCT());}
-		if(PICS_SUB_NEC) {execute (TC_AE_SUB_CRE_002_NEC());}
-		if(true) {execute (TC_AE_SUB_NTF_001());}
-		if(true) {execute (TC_AE_SUB_NTF_002());}
-
+		
 	}
 
 }  // end of module OneM2M_TestControl_ADN_profile_4

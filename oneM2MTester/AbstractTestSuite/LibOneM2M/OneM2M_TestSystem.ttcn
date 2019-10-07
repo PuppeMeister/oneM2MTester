@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/LibOneM2M/OneM2M_TestSystem.ttcn $
- *              $Id: OneM2M_TestSystem.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Test System module for oneM2M
  *
  */
@@ -16,16 +14,28 @@ module OneM2M_TestSystem {
 	import from OneM2M_Types all;
 	import from LibCommon_Time all;
 	import from OneM2M_Ports all;
-	import from OneM2M_Pixits all;
-	
-	//@JaeYoung, These are added for the translation port
-	import from IPL4asp_PortType all;
-	import from IPL4asp_Types all;
 
 /* ***************************************
  * 		Test System Components 
  * ***************************************
  */	
+  
+  type enumerated InterfaceIds {
+  	e_mca_port    (0),
+  	e_mca_in_port (1),
+    e_mcc_port    (2),
+    e_mcc_in_port (3)
+  }
+  
+  type record Interface {
+	  OneM2MPort myPort,
+	  charstring myHost,
+	  charstring myProtocolBinding,
+	  charstring mySerialization
+  }
+  
+  type record of Interface Interfaces;
+  
 	type component Tester {
 		port AdapterControlPort acPort;
 		port InfoPort infoPort;
@@ -33,18 +43,19 @@ module OneM2M_TestSystem {
 		//timers
 		timer tc_ac := PX_TAC;
 		timer tc_wait := PX_TWAIT;
+		timer tc_done := PX_TDONE;
 		//global variables
 		var Configurations vc_config;
 		var TestSystemRole vc_testSystemRole;
 		var MyResourcesList vc_resourcesList;
 		var IntegerList vc_resourcesIndexToBeDeleted := {};
-		var integer vc_aeAuxIndex := -1;//TODO To be removed
 		var integer vc_acpAuxIndex := -1;
-		var AccessControlPolicy_optional vc_acpAux;
 		var MsgIn vc_request;
 		var MsgIn vc_response;
-		var default vc_a_ae := null;
-		var default vc_a_cse := null;
+		var default vc_aeSimu := null;
+		var default vc_cseSimu := null;
+		var PrimitiveContent vc_primitiveContentRetrievedResource;
+		var Interfaces vc_myInterfaces := {};
 	};
 	
 	type component AeSimu extends Tester {
@@ -53,10 +64,11 @@ module OneM2M_TestSystem {
 		port OneM2MPort mcaPortIn;
 	
 		//global variables
-		var PrimitiveContent vc_primitiveContentRetrievedResource;
+		//var PrimitiveContent vc_primitiveContentRetrievedResource;
 
 		var CseSimu vc_cse1;//For CF02 when AeSimu is master
 		var boolean vc_auxiliaryAe2Up := false;
+		var integer vc_aeAuxIndex := -1;//Specific to AeSimu
 	};
 		
 	type component CseSimu extends Tester {
@@ -68,46 +80,38 @@ module OneM2M_TestSystem {
 		//global variables
 		var MyResourcesList vc_localResourcesList := {};
 		var AeSimu vc_ae1;//For CF02 when CseSimu is master
-		var integer vc_remoteCseIndex := -1;
 		var integer vc_localRemoteCseIndex := -1;
 		var integer vc_cSEBaseIndex := -1;	//Index of the CSEBase resource of the Tester inside vc_localResourcesList
+		var CseTypeID vc_cseType;	//cseType of the simulated CSE. IN =1, MN = 2
+		var integer vc_remoteCseIndex := -1;//Specific to CseSimu
 	};
 	
-	type component InCseSimu extends CseSimu {}
+	type component InCseSimu extends CseSimu {
+	}
 	
-	type component MnCseSimu extends CseSimu {}
+	type component MnCseSimu extends CseSimu {
+	}
 			
 	type component CseSystem {
-		//port OneM2MPort mcaPort;
-		//port OneM2MPort mcaPortIn;
-		//port OneM2MPort mccPort;
-		//port OneM2MPort mccPortIn;
-		//port AdapterControlPort acPort;
-		//port UpperTesterPort utPort;
-		
-		//@JaeYoung, These are added and modified for the translation port
-		port IPL4asp_PT mcaPort;
-		port IPL4asp_PT mcaPortIn;
-		port IPL4asp_PT mccPort;
-		port IPL4asp_PT mccPortIn;
-		port IPL4asp_PT utPort;
+		port OneM2MPort mcaPort;
+		port OneM2MPort mcaPortIn;
+		port OneM2MPort mccPort;
+		port OneM2MPort mccPortIn;
 		port AdapterControlPort acPort;
+		port UpperTesterPort utPort;
 	}	
 	
 	type component AeSystem {
-		//port OneM2MPort mcaPort;
-		//port OneM2MPort mcaPortIn;
-		//port AdapterControlPort acPort;
-		//port UpperTesterPort utPort;
-		
-		//@JaeYoung, These are added and modified for the translation port
-		port IPL4asp_PT mcaPort;
-		port IPL4asp_PT mcaPortIn;
-		port IPL4asp_PT mccPort;
-		port IPL4asp_PT mccPortIn;
-		port IPL4asp_PT utPort;
+		port OneM2MPort mcaPort;
+		port OneM2MPort mcaPortIn;
 		port AdapterControlPort acPort;
+		port UpperTesterPort utPort;
 	}		
+	
+			
+	
+	
+
 }// end of module
 with {
 	extension "anytype charstring"

@@ -5,9 +5,7 @@
  *  © 2016, oneM2M Partners Type 1 (ARIB, ATIS, CCSA, ETSI, TIA, TSDSI, TTA, TTC).
  *  All rights reserved.
  *  
- *  @author     ETSI
- *  @version    $URL: https://oldforge.etsi.org/svn/oneM2M/branches/Release1/ttcn/OneM2M_TestControl.ttcn $
- *              $Id: OneM2M_TestControl.ttcn 347 2017-08-11 08:48:20Z reinaortega $
+ *  @author     oneM2M/ETSI
  *  @desc       Test control module for oneM2M
  *
  */
@@ -50,31 +48,6 @@ module OneM2M_TestControl_Constrained_sensor_as_ADN {
 		
 		//AE_DMR_00002 
 		if(true) {execute (TC_AE_DMR_CRE_002());}
-		
-		
-		//Extendable feature set
-		//AE/REG/00002
-		if(true) {execute (TC_AE_REG_CRE_001());}
-		if(true) {execute (TC_AE_REG_CRE_002_RR());}
-		if(true) {execute (TC_AE_REG_CRE_002_RN());}
-		if(true) {execute (TC_AE_REG_CRE_002_ET());}
-		if(true) {execute (TC_AE_REG_CRE_002_LBL());}
-		if(true) {execute (TC_AE_REG_CRE_002_APN());}
-		//AE/DMR/00001
-		if(true) {execute (TC_AE_DMR_CRE_001());}
-		if(PICS_CNT_RN) {execute (TC_AE_DMR_CRE_004_RN());}
-		if(PICS_CNT_ET) {execute (TC_AE_DMR_CRE_004_ET());}
-		if(PICS_CNT_LBL) {execute (TC_AE_DMR_CRE_004_LBL());}
-		if(PICS_CNT_CR) {execute (TC_AE_DMR_CRE_004_CR());}
-		if(PICS_CNT_MNI) {execute (TC_AE_DMR_CRE_004_MNI());}
-		if(PICS_CNT_MBS) {execute (TC_AE_DMR_CRE_004_MBS());}
-		if(PICS_CNT_MIA) {execute (TC_AE_DMR_CRE_004_MIA());}
-		//AE/DMR/00002
-		if(PICS_CIN_RN) {execute (TC_AE_DMR_CRE_003_RN());}
-		if(PICS_CIN_ET) {execute (TC_AE_DMR_CRE_003_ET());}
-		if(PICS_CIN_LBL) {execute (TC_AE_DMR_CRE_003_LBL());}
-		if(PICS_CIN_CR) {execute (TC_AE_DMR_CRE_003_CR());}
-		if(PICS_CIN_CNF) {execute (TC_AE_DMR_CRE_003_CNF());}
 		
 	}
 			
